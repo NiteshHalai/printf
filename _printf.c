@@ -5,10 +5,9 @@ int _printf(const char *format, ...)
 {
 	va_list	ap;
 	int		i;
-	int		ct;
 
 	i = 0;
-	ct = 0;
+
 	va_start(ap, format);
 	while (format[i])
 	{
