@@ -13,14 +13,14 @@ int _printf(const char *format, ...)
 	while (format[i])
 	{
 	    if (format[i] != '%'){
-			  putchar(format[i]);
+			  new_putchar(format[i]);
 	      
 	    }
 			
       else if (format[i] == '%'){
         i++;
         if (format[i] == 'c'){
-        putchar('H');
+        new_putchar('H');
         }
           
       }
