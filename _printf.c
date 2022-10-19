@@ -67,6 +67,11 @@ int _printf(const char *format, ...)
           
         if (format[i] == 'd' || format[i] == 'i'){
           printf_d = va_arg (ap, int);
+          if (printf_d < 0){
+            printf_d = -printf_d;
+            new_putchar('-');
+            count++;
+          }
           print_long(printf_d);
           length =  countlength(printf_d);
           count = count + length;
@@ -79,3 +84,4 @@ int _printf(const char *format, ...)
 	va_end(ap);
 	return (count);
 }
+
