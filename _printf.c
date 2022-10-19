@@ -65,20 +65,18 @@ int _printf(const char *format, ...)
           count++;
           }
           
-        if (format[i] == 'd'){
+        if (format[i] == 'd' || format[i] == 'i'){
           printf_d = va_arg (ap, int);
           print_long(printf_d);
           length =  countlength(printf_d);
           count = count + length;
           }
-        
-
           
       }
       i++;
 	}
 
 	va_end(ap);
-
+  printf("%i", count);
 	return (count);
 }
