@@ -77,6 +77,5 @@ int _printf(const char *format, ...)
 	}
 
 	va_end(ap);
-  printf("%i", count);
 	return (count);
 }
