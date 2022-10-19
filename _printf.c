@@ -4,8 +4,7 @@ int _printf(const char *format, ...)
 
 {
 	va_list	ap;
-	int	i;
-	int j;
+	int i;
 
 	i = 0;
 
