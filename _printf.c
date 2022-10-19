@@ -16,7 +16,7 @@ int _printf(const char *format, ...)
 	while (format[i])
 	{
 	    if (format[i] != '%'){
-			  new_putchar(format[i]);
+			  putchar(format[i]);
 			  count++;
 	      
 	    }
@@ -25,14 +25,16 @@ int _printf(const char *format, ...)
         i++;
         if (format[i] == 'c'){
           printf_c = va_arg (ap, int);  
-          new_putchar(printf_c);
+          putchar(printf_c);
           count++;
           }
         
         if (format[i] == 's'){
           printf_s = va_arg (ap, const char*);
-          while(*printf_s) new_putchar(*printf_s++);
-          count++;
+          while(*printf_s) {
+            putchar(*printf_s++); 
+            count++;
+          }
           }
         
       
@@ -40,8 +42,3 @@ int _printf(const char *format, ...)
       }
       i++;
 	}
-
-	va_end(ap);
-
-	return (count);
-}
