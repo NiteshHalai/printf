@@ -5,7 +5,8 @@ int _printf(const char *format, ...)
 {
 	va_list	ap;
 	int	i;
-	int j;
+	int printf_c;
+	const char* printf_s;
 	int count;
 
 	i = 0;
@@ -23,10 +24,18 @@ int _printf(const char *format, ...)
       else if (format[i] == '%'){
         i++;
         if (format[i] == 'c'){
-        j = va_arg (ap, int);  
-        new_putchar(j);
-        count++;
-        }
+          printf_c = va_arg (ap, int);  
+          new_putchar(printf_c);
+          count++;
+          }
+        
+        if (format[i] == 's'){
+          printf_s = va_arg (ap, const char*);
+          while(*printf_s) new_putchar(*printf_s++);
+          count++;
+          }
+        
+      
           
       }
       i++;
