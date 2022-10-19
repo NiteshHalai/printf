@@ -1,17 +1,24 @@
 #include "main.h"
 
 void print_long(long value) {
-  
-   int count;
-	
-   count = 0;
-  
+
    if(value != 0) {
       print_long(value/10);
       new_putchar((value%10) + '0');
-      count++;
       
    }
+}
+
+int countlength(int number)
+{
+    static int count = 0;
+    if (number > 0)
+    {
+        count++;
+        number /= 10;
+        countlength(number);
+    }
+    return (count);
 }
 
 int _printf(const char *format, ...)
@@ -23,6 +30,7 @@ int _printf(const char *format, ...)
 	const char* printf_s;
 	int count;
 	int printf_d;
+	int length;
 
 	i = 0;
 	count = 0;
@@ -60,6 +68,8 @@ int _printf(const char *format, ...)
         if (format[i] == 'd'){
           printf_d = va_arg (ap, int);
           print_long(printf_d);
+          length =  countlength(printf_d);
+          count = count + length;
           }
         
 
