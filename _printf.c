@@ -4,26 +4,17 @@ int _printf(const char *format, ...)
 
 {
 	va_list	ap;
-	int i;
+	int		i;
 
 	i = 0;
 
 	va_start(ap, format);
 	while (format[i])
 	{
-	    if (format[i] != '%'){
-			  new_putchar(format[i]);
-	      
-	    }
-			
-      else if (format[i] == '%'){
-        i++;
-        if (format[i] == 'c'){
-        new_putchar('H');
-        }
-          
-      }
-      i++;
+		if (format[i] != '%')
+			new_putchar(format[i]);
+    
+		i++;
 	}
   
 	va_end(ap);
