@@ -1,5 +1,12 @@
 #include "main.h"
 
+void print_long(long value) {
+   if(value != 0) {
+      print_long(value/10);
+      new_putchar((value%10) + '0');
+   }
+}
+
 int _printf(const char *format, ...)
 
 {
@@ -8,6 +15,7 @@ int _printf(const char *format, ...)
 	int printf_c;
 	const char* printf_s;
 	int count;
+	int printf_d;
 
 	i = 0;
 	count = 0;
@@ -41,8 +49,14 @@ int _printf(const char *format, ...)
           new_putchar('%');
           count++;
           }
+          
+        if (format[i] == 'd'){
+          printf_d = va_arg (ap, int);
+          print_long(printf_d);
+          count++;
+          }
         
-      
+
           
       }
       i++;
