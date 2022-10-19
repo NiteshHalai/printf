@@ -60,7 +60,6 @@ int _printf(const char *format, ...)
         if (format[i] == 'd'){
           printf_d = va_arg (ap, int);
           print_long(printf_d);
-          count++;
           }
         
 
