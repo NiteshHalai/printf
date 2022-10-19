@@ -3,6 +3,8 @@
 void print_long(long value) {
   
    int count;
+	
+   count = 0;
   
    if(value != 0) {
       print_long(value/10);
