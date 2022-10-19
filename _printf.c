@@ -1,9 +1,14 @@
 #include "main.h"
 
 void print_long(long value) {
+  
+   int count;
+  
    if(value != 0) {
       print_long(value/10);
       new_putchar((value%10) + '0');
+      count++;
+      
    }
 }
 
