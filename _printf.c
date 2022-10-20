@@ -83,7 +83,8 @@ int _printf(const char *format, ...)
           
 	  if (format[i] == 'b'){ 
 	        printf_b = va_arg (ap, int);
-	        long bin = 0;
+	        long bin;
+		bin = 0;
 	         
 	       int rem, i = 1;
 
