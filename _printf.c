@@ -12,8 +12,7 @@ void print_long(long value) {
 int countlength(int num)
 {
     int count;
-    count=(num==0)?1:log10(num)+1;  
-    printf("%i", count);
+    count=(num==0)?1:log10(num)+1;
     return (count);
 }
 
