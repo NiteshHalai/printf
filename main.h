@@ -11,7 +11,10 @@ int _printf(const char *format, ...);
 int new_putchar(char);
 int countlength(int number);
 void print_long(long value);
-int print_c(va_list c);
-int print_b(va_list b);
+
+/* will try to work with these
+*int print_c(va_list c);
+*int print_b(va_list b);
+*/
 
 #endif
