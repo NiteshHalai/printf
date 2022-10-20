@@ -1,4 +1,5 @@
 #include "main.h"
+#include <math.h>
 
 void print_long(long value) {
 
