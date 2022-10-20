@@ -61,7 +61,9 @@ int _printf(const char *format, ...)
       else if (format[i] == '%'){
         i++;
 	      
-	     
+ /**
+ * prints a character
+ */    
         if (format[i] == 'c'){
           printf_c = va_arg (ap, int);  
           new_putchar(printf_c);
@@ -69,7 +71,7 @@ int _printf(const char *format, ...)
           }
        
  /**
- * to check if value is a string
+ * prints a string
  */
         if (format[i] == 's'){
           printf_s = va_arg (ap, const char*);
