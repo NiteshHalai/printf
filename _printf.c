@@ -3,41 +3,31 @@
 
 
 void print_long(long value) {
-
    if(value != 0) {
       print_long(value/10);
       new_putchar((value%10) + '0');
-      
    }
 }
-
 /**
 *returns the length of output
 */
-
 int countlength(int n)
 {
-  
   int count;
-  
-  count=0;
-  
+  count=0; 
   do {
     n /= 10;
     ++count;
   } while (n != 0); 
     return (count);
 }
-
 /**
  * _printf - Receives the main string and all the necessary parameters to
  * print a formated string
  * @format: A string containing all the desired characters
  * Return: A total count of the characters printed
  */
-
 int _printf(const char *format, ...)
-
 {
 	va_list	ap;
 	int	i;
@@ -57,12 +47,9 @@ int _printf(const char *format, ...)
 	    if (format[i] != '%'){
 			  new_putchar(format[i]);
 			  count++;
-	      
 	    }
-			
       else if (format[i] == '%'){
-        i++;
-	      
+        i++;	      
  /**
  * prints a character
  */    
@@ -70,8 +57,7 @@ int _printf(const char *format, ...)
           printf_c = va_arg (ap, int);  
           new_putchar(printf_c);
           count++;
-          }
-       
+          }     
  /**
  * prints a string
  */
@@ -81,13 +67,11 @@ int _printf(const char *format, ...)
             new_putchar(*printf_s++); 
             count++;
           }
-          }
-          
+          }  
         if (format[i] == '%'){ 
           new_putchar('%');
           count++;
           }
- 
  /**
  *Prints an integer
  */
@@ -101,20 +85,13 @@ int _printf(const char *format, ...)
           print_long(printf_d);
           length =  countlength(printf_d);
           count = count + length;
-          }
-          
+          }     
  /**
  *prints in binary
  */
-	      
-	  if (format[i] == 'b'){ 
-	        
+          if (format[i] == 'b'){ 
 	        long bin;
-		
-	         
-	       int rem, i;
-		  
-		  
+	        int rem, i;  
 		i = 1;
 		bin = 0;
 		printf_b = va_arg (ap, unsigned int);
@@ -124,7 +101,6 @@ int _printf(const char *format, ...)
    		      bin += rem * i;
 		        i *= 10;
 		      }
-              
   	      print_long(bin);
 	        length =  countlength(bin);
 	        count = count + length;
@@ -132,7 +108,6 @@ int _printf(const char *format, ...)
       }
       i++;
 	}
-
 	va_end(ap);
 	return (count);
 }
