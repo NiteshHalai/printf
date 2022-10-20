@@ -1,3 +1,4 @@
+#include "main.h"
 
 /**
  * new_putchar- writes the character c to stdout.
