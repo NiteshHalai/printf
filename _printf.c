@@ -34,7 +34,7 @@ int _printf(const char *format, ...)
 	int count;
 	int printf_d;
 	int length;
-	long printf_b;
+	unsigned int printf_b;
 
 	i = 0;
 	count = 0;
@@ -91,7 +91,7 @@ int _printf(const char *format, ...)
 		  
 		i = 1;
 		bin = 0;
-		printf_b = va_arg (ap, int);
+		printf_b = va_arg (ap, unsigned int);
 	        while (printf_b!=0) {
 		        rem = printf_b % 2;
 		        printf_b /= 2;
