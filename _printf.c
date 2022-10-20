@@ -101,6 +101,10 @@ int _printf(const char *format, ...)
           count = count + length;
           }
           
+ /**
+ *prints in binary
+ */
+	      
 	  if (format[i] == 'b'){ 
 	        
 	        long bin;
