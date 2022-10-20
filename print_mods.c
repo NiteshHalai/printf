@@ -5,6 +5,6 @@ int print_c(va_list c)
 {
 	char ch = (char)va_arg(c, int);
 
-	_putchar(ch);
+	new_putchar(ch);
 	return (1);
 }
