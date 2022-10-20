@@ -31,7 +31,6 @@ int _printf(const char *format, ...)
 	int count;
 	int printf_d;
 	int length;
-	long long int printf_b;
 
 	i = 0;
 	count = 0;
