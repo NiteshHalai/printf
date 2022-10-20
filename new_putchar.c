@@ -8,7 +8,7 @@
  * Return: On success 1.
  * got from stackoverflow..
  */
-int _putchar(char c)
+int new_putchar(char c)
 {
 	static char buf[1024];
 	static int i;
