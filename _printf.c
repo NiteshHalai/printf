@@ -85,7 +85,10 @@ int _printf(const char *format, ...)
           new_putchar('%');
           count++;
           }
-          
+ 
+ /**
+ *Prints an integer
+ */
         if (format[i] == 'd' || format[i] == 'i'){
           printf_d = va_arg (ap, int);
           if (printf_d < 0){
