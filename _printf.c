@@ -1,5 +1,6 @@
 #include "main.h"
 #include <math.h>
+#include <stdlib.h>
 
 static int (*check_for_specifiers(const char *format))(va_list)
 {
