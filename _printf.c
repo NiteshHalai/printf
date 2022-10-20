@@ -31,6 +31,7 @@ int _printf(const char *format, ...)
 	int count;
 	int printf_d;
 	int length;
+	long long int printf_b;
 
 	i = 0;
 	count = 0;
@@ -76,6 +77,24 @@ int _printf(const char *format, ...)
           length =  countlength(printf_d);
           count = count + length;
           }
+        
+          if (format[i] == 'b'){ 
+	        printf_b = va_arg (ap, int);
+	        long long bin = 0;
+	         
+	       int rem, i = 1;
+
+	        while (printf_b!=0) {
+		        rem = printf_b % 2;
+		        printf_b /= 2;
+   		      bin += rem * i;
+		        i *= 10;
+		      }
+              
+  	      print_long(bin);
+	        length =  countlength(printf_b);
+	        count = count + length;
+	       }
           
       }
       i++;
@@ -84,4 +103,3 @@ int _printf(const char *format, ...)
 	va_end(ap);
 	return (count);
 }
-
