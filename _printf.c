@@ -10,10 +10,17 @@ void print_long(long value) {
    }
 }
 
-int countlength(int num)
+int countlength(int n)
 {
-    int count;
-    count=(num==0)?1:log10(num)+1;
+  
+  int count;
+  
+  count=0;
+  
+  do {
+    n /= 10;
+    ++count;
+  } while (n != 0); 
     return (count);
 }
 
