@@ -1,25 +1,5 @@
 #include "main.h"
 #include <math.h>
-#include <stdlib.h>
-
-static int (*check_for_specifiers(const char *format))(va_list)
-{
-	unsigned int i;
-	print_t p[] = {
-		{"c", print_c},
-		{"b", print_b},
-			{NULL, NULL}
-	};
-for (i = 0; p[i].t != NULL; i++)
-	{
-		if (*(p[i].t) == *format)
-		{
-			break;
-		}
-	}
-	return (p[i].f);
-}
-
 
 void print_long(long value) {
 
