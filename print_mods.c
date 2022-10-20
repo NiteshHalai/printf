@@ -1,14 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
 
-int print_c(va_list c)
-{
-	char ch = (char)va_arg(c, int);
-
-	new_putchar(ch);
-	return (1);
-}
-
 /**
 * print_b - takes an unsigned int and prints it in binary notation
  * @b: unsigned in to print
