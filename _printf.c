@@ -11,13 +11,6 @@ void print_long(long value) {
 
 int countlength(int number)
 {
-    static int count = 0;
-    if (number > 0)
-    {
-        count++;
-        number /= 10;
-        countlength(number);
-    }
     return (count);
 }
 
