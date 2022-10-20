@@ -9,15 +9,11 @@ void print_long(long value) {
    }
 }
 
-int countlength(int number)
+int countlength(int num)
 {
-    static int count = 0;
-    if (number > 0)
-    {
-        count++;
-        number /= 10;
-        countlength(number);
-    }
+    int count;
+    count=(num==0)?1:log10(num)+1;  
+    printf("%i", count);
     return (count);
 }
 
