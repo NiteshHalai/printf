@@ -4,6 +4,7 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <stdarg.h>
+#include <math.h>  
 
 /*list functions here*/
 int _printf(const char *format, ...);
