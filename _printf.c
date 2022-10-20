@@ -60,12 +60,17 @@ int _printf(const char *format, ...)
 			
       else if (format[i] == '%'){
         i++;
+	      
+	     
         if (format[i] == 'c'){
           printf_c = va_arg (ap, int);  
           new_putchar(printf_c);
           count++;
           }
-        
+       
+ /**
+ * to check if value is a string
+ */
         if (format[i] == 's'){
           printf_s = va_arg (ap, const char*);
           while(*printf_s) {
