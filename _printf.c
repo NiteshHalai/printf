@@ -100,7 +100,7 @@ int _printf(const char *format, ...)
 		      }
               
   	      print_long(bin);
-	        length =  countlength(printf_b);
+	        length =  countlength(bin);
 	        count = count + length;
 	       }
       }
