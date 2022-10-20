@@ -82,12 +82,16 @@ int _printf(const char *format, ...)
           }
           
 	  if (format[i] == 'b'){ 
-	        printf_b = va_arg (ap, int);
+	        
 	        long bin;
-		bin = 0;
+		
 	         
-	       int rem, i = 1;
-
+	       int rem, i;
+		  
+		  
+		i = 1;
+		bin = 0;
+		printf_b = va_arg (ap, int);
 	        while (printf_b!=0) {
 		        rem = printf_b % 2;
 		        printf_b /= 2;
