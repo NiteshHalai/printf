@@ -58,7 +58,13 @@ int _printf(const char *format, ...)
 			  count++;
 	    }
       else if (format[i] == '%'){
-        i++;	      
+        i++;	
+ /**
+ * null byte after %
+ */    	      
+	 if (format[i] == '\0'){
+          return(-1);
+          }
  /**
  * prints a character
  */    
