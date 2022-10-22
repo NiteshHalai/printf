@@ -93,7 +93,7 @@ int _printf(const char *format, ...)
         if (format[i] == 'd' || format[i] == 'i'){
           printf_d = va_arg (ap, int);
 	  if (printf_d == 0){
-            putchar('0');
+            new_putchar('0');
             count++;}
           else if  (printf_d < 0){
             printf_d = -printf_d;
