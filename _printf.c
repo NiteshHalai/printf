@@ -42,6 +42,15 @@ int _printf(const char *format, ...)
 	count = 0;
 
 	va_start(ap, format);
+	
+ /**
+ * if null is passed in the function
+ */    
+	
+	if (format == NULL){
+	  return(-1);
+	    }
+	
 	while (format[i])
 	{
 	    if (format[i] != '%'){
