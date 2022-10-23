@@ -133,21 +133,19 @@ if (format[i] == 'b'){
 	       }
 	      
  /**
- *Prints an integer
+ *Prints an unsigned integer
  */
-        if (format[i] == 'u'){
-          printf_d = va_arg (ap, int);
-	  if (printf_d == 0){
-            new_putchar('0');}
-          else if  (printf_d < 0){
-            printf_d = -printf_d;
-            new_putchar('-');
-            count++;
+          if (format[i] == 'u'){
+          printf_u = va_arg (ap, int);
+	        if (printf_u == 0){
+            putchar('0');}
+          else if  (printf_u < 0){
+            printf_u = (4294967296 + printf_u);
           }
-          print_long(printf_d);
-          length =  countlength(printf_d);
+          print_long(printf_u);
+          length =  countlength(printf_u);
           count = count + length;
-          }   
+          }  
  /**
  *conditional formats end here. None should be ended after this.
  */	      
