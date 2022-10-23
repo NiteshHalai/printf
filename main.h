@@ -9,7 +9,7 @@
 /*list functions here*/
 int _printf(const char *format, ...);
 int new_putchar(char);
-int countlength(int number);
+int countlength(long number);
 void print_long(long value);
 
 /**
