@@ -129,7 +129,7 @@ if (format[i] == 'b'){
 
   	      print_long(bin);
 	        length =  countlength(bin);
-	        count = count + length + 1;
+	        count = count + length;
 	       }
  /**
  *conditional formats end here. None should be ended after this.
