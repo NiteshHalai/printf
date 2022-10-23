@@ -131,6 +131,23 @@ if (format[i] == 'b'){
 	        length =  countlength(bin);
 	        count = count + length + 1;
 	       }
+	      
+ /**
+ *Prints an integer
+ */
+        if (format[i] == 'u'){
+          printf_d = va_arg (ap, int);
+	  if (printf_d == 0){
+            new_putchar('0');}
+          else if  (printf_d < 0){
+            printf_d = -printf_d;
+            new_putchar('-');
+            count++;
+          }
+          print_long(printf_d);
+          length =  countlength(printf_d);
+          count = count + length;
+          }   
  /**
  *conditional formats end here. None should be ended after this.
  */	      
