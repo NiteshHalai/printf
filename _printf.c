@@ -106,20 +106,24 @@ int _printf(const char *format, ...)
  /**
  *prints in binary
  */
-          if (format[i] == 'b'){ 
-		  
-          long bin = 0;
-          long i = 1;
-	         
+if (format[i] == 'b'){ 
+
+          long bin;
+          long int rem;
+          long int place;
+          
+          bin = 0;
+          rem = 0;
+          place = 1;
+
           printf_b = va_arg (ap, unsigned long int);
 	       
-        
-
- 
-          while (printf_b > 0) {
-            bin += (printf_b % 2) * i;
-            printf_b /= 2;
-            i *= 10;
+  
+          while (printf_b) {
+            rem = printf_b % 2;
+            printf_b = printf_b / 2;
+            bin = bin + (rem * place);
+            place = place * 10;
           }
               
 
