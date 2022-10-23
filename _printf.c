@@ -107,12 +107,14 @@ int _printf(const char *format, ...)
  *prints in binary
  */
           if (format[i] == 'b'){ 
+		  
+          long bin = 0;
+          long i = 1;
 	         
           printf_b = va_arg (ap, unsigned long int);
 	       
         
-	        long bin = 0;
-          long i = 1;
+
  
           while (printf_b > 0) {
             bin += (printf_b % 2) * i;
