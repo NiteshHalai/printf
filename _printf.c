@@ -107,21 +107,28 @@ int _printf(const char *format, ...)
  *prints in binary
  */
           if (format[i] == 'b'){ 
-	        long bin;
-	        int rem, i;  
-		i = 1;
-		bin = 0;
-		printf_b = va_arg (ap, unsigned int);
-	        while (printf_b!=0) {
-		        rem = printf_b % 2;
-		        printf_b /= 2;
-   		      bin += rem * i;
-		        i *= 10;
-		      }
+	         
+          printf_b = va_arg (ap, unsigned long int);
+	       
+        
+	        long bin = 0;
+          long i = 1;
+ 
+          while (printf_b > 0) {
+            bin += (printf_b % 2) * i;
+            printf_b /= 2;
+            i *= 10;
+          }
+              
+
   	      print_long(bin);
 	        length =  countlength(bin);
-	        count = count + length;
+	        count = count + length + 1;
 	       }
+ /**
+ *conditional formats end here. None should be ended after this.
+ */	      
+ 
       }
       i++;
 	}
