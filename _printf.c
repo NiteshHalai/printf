@@ -11,7 +11,7 @@ void print_long(long value) {
 /**
 *returns the length of output
 */
-int countlength(int n)
+int countlength(long n)
 {
   int count;
   count=0; 
