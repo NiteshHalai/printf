@@ -34,7 +34,7 @@ int _printf(const char *format, ...)
 	int printf_c;
 	const char* printf_s;
 	int count;
-	int printf_d;
+	long int printf_d;
 	int length;
 	unsigned int printf_b;
 
