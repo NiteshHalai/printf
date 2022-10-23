@@ -139,7 +139,7 @@ if (format[i] == 'b'){
           if (format[i] == 'u'){
           printf_u = va_arg (ap, int);
 	        if (printf_u == 0){
-            putchar('0');}
+            new_putchar('0');}
           else if  (printf_u < 0){
             printf_u = (4294967296 + printf_u);
           }
